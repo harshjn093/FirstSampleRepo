@@ -1,14 +1,16 @@
 package com.example.project.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloController {
+@RequestMapping("/course")
+public class TestController {
 	
-	@RequestMapping("/hello")
+	@RequestMapping(method= RequestMethod.GET,value="/test")
 	public String helloWorld() {
-		return "hello World";
+		return "Success";
 	}
 
 }
